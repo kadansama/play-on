@@ -1,1 +1,1 @@
-export { Watched } from './watched';
+export { Watched } from './Watched.tsx';
