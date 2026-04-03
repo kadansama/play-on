@@ -1,0 +1,9 @@
+.header__nav{
+    display: flex;
+    column-gap: 50px;
+}
+
+.header__navElem{
+    color: var(--white);
+    font-size: 18.75px;
+}

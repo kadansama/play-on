@@ -1,0 +1,15 @@
+.wrapper{
+    background: var(--gray-1600);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    padding: 30px 80px 50px 30px;
+    height: 185px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.active{
+    background: var(--gray-2000);
+}

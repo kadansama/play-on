@@ -1,0 +1,14 @@
+.watched__heading{
+    margin-bottom: 46px;
+    font-size: 25px;
+}
+.watched__paragraph{
+    margin-bottom: 67px;
+    max-width: 375px;
+    font-size: 20px;
+}
+
+.watched{
+    display: flex;
+    align-items: center;
+}

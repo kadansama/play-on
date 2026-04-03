@@ -1,0 +1,1 @@
+export {useFilmHeroCarousel} from './useFilmHeroCarousel'

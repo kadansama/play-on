@@ -1,0 +1,28 @@
+.downloadBtn{
+    display: flex;
+    padding: 3px 8px;
+    box-sizing: border-box;
+    background: var(--gray-1600);
+    column-gap: 5px;
+    border-radius: var(--radius-6);
+    align-items: center;
+}
+.downloadBtn__upload{
+    font-size: 12px;
+    color: var(--gray-1900);
+}
+
+.downloadBtn__store{
+    font-size: 15px;
+    color: var(--gray-1900);
+}
+
+.storeButtons{
+    display: flex;
+    column-gap: 18px;
+}
+
+.downloadBtn__info{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+    background: radial-gradient(85.23% 446.74% at 97.73% 23.91%, rgba(252, 132, 175, 0.2) 0%, rgba(167, 125, 255, 0.2) 100%);
+    backdrop-filter: blur(12.5209px);
+    border-radius: 6px;
+    padding: 20px 23px 20px 20px;
+}
+
+.heading {
+    font-size: 18.75px;
+    color: var(--white-700);
+    font-weight: 400;
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+

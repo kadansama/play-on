@@ -1,0 +1,24 @@
+.language{
+    display: flex;
+    align-items: center;
+    padding: 6.25px 12.5px 6.25px 7.5px;
+    background: var(--gray-1600);
+    border-radius: var(--radius-6);
+    border: 1.25px solid var(--gray-1700);
+}
+
+.language__icon{
+    margin-right: 5px;
+}
+
+.language__arrow{
+    margin-left: 8px;
+}
+
+.language__text{
+    font-weight: var(--fw-bold);
+    font-size: 12px;
+    color: var(--white);
+    width: min-content;
+}
+

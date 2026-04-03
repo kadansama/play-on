@@ -1,0 +1,23 @@
+.logo {
+    background: var(--color-logo);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: var(--fw-semibold);
+    font-weight: 600;
+}
+
+.large {
+    font-size: 43.75px;
+}
+
+.small{
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    .logo{
+        font-size: 35px;
+    }
+}

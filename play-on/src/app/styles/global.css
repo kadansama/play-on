@@ -1,0 +1,103 @@
+:root {
+    /* Colors */
+
+    --gray-50: rgba(246, 246, 246, 1);
+    --gray-100: rgba(244, 244, 244, 1);
+    --gray-200: rgba(238, 238, 238, 1);
+    --gray-300: rgba(242, 242, 242, 1);
+    --gray-400: rgba(220, 220, 220, 1);
+    --gray-500: rgba(217, 217, 217, 1);
+    --gray-600: rgba(201, 201, 201, 1);
+    --gray-700: rgba(189, 189, 189, 1);
+    --gray-800: rgba(172, 172, 172, 1);
+    --gray-900: rgba(158, 158, 158, 1);
+    --gray-1000: rgba(114, 114, 114, 1);
+    --gray-1100: rgba(109, 109, 109, 1);
+    --gray-1200: rgba(91, 91, 91, 1);
+    --gray-1300: rgba(52, 63, 93, 1);
+    --gray-1400: rgba(36, 38, 43, 1);
+    --gray-1500: rgba(255, 255, 255, 0.2);
+    --gray-1600: rgba(255, 255, 255, 0.1);
+    --gray-1700: rgba(233, 233, 233, 0.1);
+    --gray-1800: rgba(203, 203, 203, 1);
+    --gray-1900: rgba(182, 182, 182, 1);
+    --gray-2000: rgba(255, 255, 255, 0.3);
+    --gray-2100: rgba(118, 108, 118, 1); 
+    --gray-2200: rgba(125, 124, 134, 1);
+    --gray-2300: rgba(246, 246, 246, 0.4);
+    --gray-2400: rgba(150, 155, 156, 1);
+    --gray-2500: rgba(206, 206, 206, 1);
+    --gray-2600: rgba(83, 79, 96, 1);
+    --gray-2700: rgba(73, 75, 82, 1);
+    --gray-2800: rgba(53, 55, 64, 1);
+    
+    --pink: rgba(255, 44, 120, 1);
+
+    --black: rgba(0, 0, 0, 1);
+    --black-100: rgba(2, 5, 16, 1);
+    --black-200: rgba(2, 5, 16, 0.7);
+    --black-300: rgba(16, 17, 31, 1);
+    --black-400: rgba(10, 3, 28, 1);
+    --black-500: rgba(29, 23, 49, 1);
+    --black-600: rgba(68, 62, 86, 1);
+
+
+    --blue-500: rgba(45, 75, 102, 1);
+    --purple-500: rgba(172, 164, 198, 1);
+    --purple-600: rgba(194, 186, 220, 1);
+    --blue-600: rgba(34, 28, 51, 1);
+
+    --white: rgba(255, 255, 255, 1);
+    --white-100: rgba(250, 250, 250, 1);
+    --white-200: rgba(235, 235, 235, 1);
+    --white-300: rgba(233, 233, 233, 1);
+    --white-400: rgba(231, 231, 231, 1);
+    --white-500: rgba(226, 226, 226, 1);
+    --white-600: rgba(216, 216, 216, 1);
+    --white-700: rgba(214, 214, 214, 1);
+    --white-800: rgba(212, 212, 212, 1);
+    --white-900: rgba(196, 196, 196, 1);
+    --white-1000: rgba(194, 193, 193, 1);
+
+
+    --background-movies-btn: radial-gradient(85.23% 446.74% at 97.73% 23.91%, rgba(252, 132, 175, 0.2) 0%, rgba(167, 125, 255, 0.2) 100%);
+    --color-logo: radial-gradient(62.5% 335.18% at 87.5% 50%, #FF2C78 0%, #DCA4FF 100%);
+    --color-carousel-btn: rgba(241, 241, 241, 0.3);
+
+    /* Colors */
+
+    /* BorderRadius */
+
+    --radius-3: 3px;
+    --radius-4: 4px;
+    --radius-5: 6px;
+    --radius-6: 6px;
+    --radius-7: 7px;
+    --radius-8: 8px;
+    --radius-9: 9px;
+    --radius-10: 11px;
+    --radius-12: 12px;
+    --radius-14: 14px;
+    --radius-15: 16px;
+    --radius-17: 17px;
+    --radius-19: 19px;
+    --radius-21: 21px;
+
+
+    /* BorderRadius*/
+
+    /* Weight */
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+    /* Weight */
+
+    --breakpoint-mobile: 375px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-large: 1200px;
+    --breakpoint-xlarge: 1440px;
+}

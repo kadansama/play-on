@@ -1,0 +1,15 @@
+.page{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 30px 70px 50px;
+    background: var(--black-400);
+    margin-top: 50px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}

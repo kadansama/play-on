@@ -1,0 +1,19 @@
+.header__info{
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.navWrapper {
+  transition: opacity 0.3s ease; 
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1024px){
+  .navWrapper{
+    display: none;
+  }
+}

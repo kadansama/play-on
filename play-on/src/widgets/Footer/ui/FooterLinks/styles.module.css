@@ -1,0 +1,14 @@
+.footerLinks{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+}
+
+.footerLinks__link{
+    color: var( --gray-900);
+    font-size: 18.75px;
+}
+
+.footerLinks__link:hover{
+    color: var(--white);
+}

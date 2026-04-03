@@ -1,0 +1,9 @@
+.wrapper{
+    display: flex;
+    column-gap: 25px;
+}
+
+.link{
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "models/*": ["models/*"],
+      "store/*": ["store/*"],
+      "api/*": ["api/*"],
+      "components/*": ["components/*"],
+      "config/*": ["config/*"],
+      "styles/*": ["styles/*"],
+      "utils/*": ["utils/*"],
+      "pages/*": ["pages/*"],
+      "widgets/*": ["widgets/*"],
+      "providers/*": ["providers/*"],
+      "shared/*": ["shared/*"],
+      "@assets/*": ["shared/assets/*"],
+    },
+    "types": ["vite/client", "node"]
+  }
+}

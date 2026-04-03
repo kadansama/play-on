@@ -1,0 +1,14 @@
+.btn{
+    background: var(--pink);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.6px 7.2px;
+    box-sizing: border-box;
+    row-gap: 3.6px;
+}
+.row{
+    width: 19.2px;
+    height: 1.2px;
+}

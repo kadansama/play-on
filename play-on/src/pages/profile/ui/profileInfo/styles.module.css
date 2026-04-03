@@ -1,0 +1,22 @@
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.info__heading{
+    font-weight: var(--fw-medium);
+    font-size: 30px;
+    color: var(--white);
+}
+
+.info__text{
+    font-size: 15px;
+    color: var(--gray-600);
+}
+
+.info__phone{
+    display: flex;
+    justify-content: space-between; 
+}

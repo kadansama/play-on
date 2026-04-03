@@ -1,0 +1,54 @@
+.card__box {
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    aspect-ratio: 5 / 3; 
+}
+.p{
+    width: 360px;
+    height: 200px;
+    background: #fff;
+}
+
+/* Затемнение */
+.card__box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* 45% затемнение */
+    transition: opacity 0.3s ease-in-out; /* анимация */
+    pointer-events: none; /* чтобы не мешать наведению */
+}
+
+/* Убираем затемнение при наведении */
+.card__box:hover::after {
+    opacity: 0;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    column-gap: 40px;
+}
+
+.simular{
+    margin-top: 50px;
+    background: var(--black-400);
+    padding: 15px 30px 30px;
+    border-radius: 19px;
+}
+
+.simular__paragraph{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+

@@ -1,0 +1,66 @@
+@import './global.css';
+@import '../../shared/assets/fonts/fonts.css';
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  text-transform: none;
+}
+
+p,span, h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: outside;
+  list-style-image: none;
+}
+a {
+  color: transparent;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+input, input:focus{
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.slick-track{
+  display: flex;
+  align-items: center;
+}
+
+.allplay__poster{
+    height: 100% !important;
+}
+
+.topAdPad{
+    display: none !important;
+}

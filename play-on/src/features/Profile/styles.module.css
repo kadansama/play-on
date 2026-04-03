@@ -1,0 +1,17 @@
+.profile{
+    color: var(--white);
+    outline: 1.25px solid var(--gray-1800);
+    border-radius: var(--radius-4);
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.profile__link{
+    background-image: url('@assets/images/profile.svg');
+    width: 14px;
+    height: 22px;
+    background-repeat: no-repeat;
+}

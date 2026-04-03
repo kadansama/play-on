@@ -1,0 +1,14 @@
+.arrowBtn {
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.arrowBtn.left .arrowBtn__img {
+    transform: rotate(180deg);
+}
+

@@ -1,0 +1,38 @@
+.customArrow {
+  z-index: 30;
+}
+
+:global(.slick-prev).customArrow {
+  left: 7%;
+}
+
+:global(.slick-next).customArrow {
+  right: 6%;
+}
+
+:global(.slick-prev:before),
+:global(.slick-next:before) {
+  display: none !important;
+}
+
+.customArrow {
+  width: 68px;
+  height: 90px;
+  background: var(--gray-2300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  outline: 1px solid var(--gray-2400);
+  box-sizing: border-box;
+}
+
+.customArrow svg {
+  width: 27px;
+  height: 49px;
+}
+
+.customArrow:hover {
+  background: var(--gray-2300);
+  outline: 2px solid var(--gray-2400);
+}

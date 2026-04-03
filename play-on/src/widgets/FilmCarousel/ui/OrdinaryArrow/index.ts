@@ -1,0 +1,1 @@
+export {OrdinaryArrow} from './OrdinaryArrow'

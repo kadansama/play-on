@@ -1,0 +1,20 @@
+.carousel__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+    position: relative;
+    margin-top: 70px;
+}
+
+.carousel__heading {
+    font-size: 30px;
+    font-weight: var(--fw-bold);
+}
+
+
+.carousel__film {
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box;
+}

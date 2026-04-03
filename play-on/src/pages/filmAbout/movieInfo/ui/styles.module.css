@@ -1,0 +1,10 @@
+.img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.textFallback{
+    font-weight: 900;
+    text-align: center;
+}

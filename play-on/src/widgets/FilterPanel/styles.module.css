@@ -1,0 +1,12 @@
+.panel{
+    display: flex;
+    width: 100%;
+    column-gap: 15px;
+    margin-bottom: 50px;
+}
+
+.loader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

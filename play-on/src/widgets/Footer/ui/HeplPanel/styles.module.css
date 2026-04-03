@@ -1,0 +1,17 @@
+.panel{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.panel__info{
+    align-items: center;
+    display: flex;
+    column-gap: 10px;
+}
+
+.panel__city{
+    font-size: 15px;
+    color: var(--gray-1900);
+}
