@@ -5,3 +5,15 @@
     column-gap: 25px;
     width: 100%;
 }
+
+.searchOverlay {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 31;
+    cursor: pointer;
+    backdrop-filter: blur(7px);
+}

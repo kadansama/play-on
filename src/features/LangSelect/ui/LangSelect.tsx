@@ -15,7 +15,7 @@ export const LangSelect = ({ useText = false }: LangSelectProps) => {
       <div className={styles.language__icon}>
         <WorldIcon />
       </div>
-      {useText && <span className={styles.language__text}>English</span>}
+      {useText && <span className={styles.language__text}>Русский</span>}
       <div className={styles.language__arrow}>
         <ArrowDownIcon />
       </div>

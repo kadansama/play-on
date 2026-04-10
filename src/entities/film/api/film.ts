@@ -27,7 +27,6 @@ export class FilmApi extends BaseApi {
 
     async getSimularMovie(): Promise<SimularMovie> {
         const data = await this.fetchWithAuth(`/v2.2/films/${this.id}/similars`)
-        // console.log(data)
         return data
     }
 }

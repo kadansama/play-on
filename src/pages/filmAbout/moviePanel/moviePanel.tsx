@@ -4,7 +4,7 @@ import { FilmPlayer } from "../filmPlayer";
 import { MovieInfo } from "../movieInfo";
 
 import styles from './styles.module.css'
-import { SimularMovies } from "../simularFilms";
+import { SimularMovies } from "../simularMovies";
 export const MoviePanel = () => {
     const { id } = useParams<{ id: string }>();
     const numericId = Number(id)

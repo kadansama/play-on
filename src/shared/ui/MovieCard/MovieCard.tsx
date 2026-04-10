@@ -5,11 +5,11 @@ import { Skeleton } from "@mui/material"
 
 export type Card = {
     id: number,
-    src: string,
+    src?: string,
     isNormal?: boolean
 }
 
-export const MovieCard = memo(({ id, src, isNormal = true }: Card) => {
+export const MovieCard = memo(({ id, src="./shared/assets/images/general/placeholder.png", isNormal = true }: Card) => {
     const skeletonRef = useRef<HTMLDivElement>(null)
     const imgRef = useRef<HTMLImageElement>(null)
     

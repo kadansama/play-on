@@ -3,6 +3,8 @@ import { Select } from "shared/ui/Select";
 import { BaseFilterOption, FilterConfig } from "shared/ui/Select/types";
 import { DateToQuery } from "./DateFilter/types";
 
+import styles from './styles.module.css'
+
 interface BaseItemId {
   id: number;
 }
@@ -54,7 +56,7 @@ export const UniversalFilter = <T,>({ config, onChange, value }: UniversalFilter
     return String(value);
   }, [value]);
 
-  if (isLoading) return "Загрузка";
+  if (isLoading) return <p>"Загрузка"</p>;
 
   return (
     <Select

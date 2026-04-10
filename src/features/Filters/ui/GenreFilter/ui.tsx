@@ -1,7 +1,7 @@
 import { genreFilterConfig } from "features/Filters/model/config";
 import { UniversalFilter } from "../UniversalFilter";
 
-interface GenreFilterProps {
+export interface GenreFilterProps {
   onChange: (id: number | null) => void;
   value: number | null;
 }

@@ -14,7 +14,7 @@ export const FilmCarousel = memo(({ films, title }: FilmCarouselProps) => {
   const slides =
     films.map((film) => (
       <div key={film.kinopoiskId} className={styles.carousel__film}>
-        <MovieCard id={film.kinopoiskId} src={film.posterUrl} />
+        <MovieCard id={film.kinopoiskId} src={film?.posterUrl} />
       </div>
     ))
 

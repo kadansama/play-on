@@ -21,19 +21,19 @@ export const FilterPanel = ({ filterObj } : IFilterPanel) => {
         const newFilters = { ...filters, ...newPart }
         setFilters(newFilters)
     }
-    const currentDateValue: DateToQuery = {
+    const currentDateValue: DateToQuery | null = filters.yearFrom && filters.yearTo ? {
         yearFrom: filters.yearFrom,
         yearTo: filters.yearTo
-    }
+    } : null
 
-    const currentCountryValue = filters.countries.length > 0 ? filters.countries[0] : null
-    const currentGenreValue = filters.genres.length > 0 ? filters.genres[0] : null
+    const currentCountryValue: number | null = filters.countries?.length ? filters.countries[0] : null
+    const currentGenreValue: number | null = filters.genres?.length ? filters.genres[0] : null
     return (
         <div>
             <div className={styles.panel}>
                 <DateFilter onChange={(date) => updateFilters({ yearFrom: date.yearFrom, yearTo: date.yearTo }) } value={currentDateValue}/>
-                <CountryFilter onChange={(id) => updateFilters({ countries: [id] })} value={currentCountryValue}/>
-                <GenreFilter onChange={(id) => updateFilters({ genres: [id] })} value={currentGenreValue}
+                <CountryFilter onChange={(id) => updateFilters({ countries: id ? [id] : [] })} value={currentCountryValue}/>
+                <GenreFilter onChange={(id) => updateFilters({ genres: id ? [id] : [] })} value={currentGenreValue}
 />
             </div>
             <FilmList list={data ?? []}/>

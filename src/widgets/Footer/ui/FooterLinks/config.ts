@@ -1,10 +1,10 @@
 export const footerLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'Jobs', path: '/commingSoon' },
-  { label: 'Info', path: '/commingSoon' },
-  { label: 'Support', path: '/commingSoon' },
-  { label: 'ContactUs', path: '/commingSoon' },
-  { label: 'Faq', path: '/commingSoon' },
-  { label: 'Account', path: '/profile' },
-  { label: 'HelpCenter', path: '/commingSoon' },
+  { label: 'Главная', path: '/' },
+  { label: 'Вакансии', path: '/commingSoon' },
+  { label: 'О сайте', path: '/commingSoon' },
+  { label: 'Поддержка', path: '/commingSoon' },
+  { label: 'Связь с нами', path: '/commingSoon' },
+  { label: 'Вопросы', path: '/commingSoon' },
+  { label: 'Аккаунт', path: '/profile' },
+  { label: 'Справка', path: '/commingSoon' },
 ] as const;

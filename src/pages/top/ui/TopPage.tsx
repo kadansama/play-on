@@ -1,7 +1,7 @@
 export const TopPage = ()=>{
     return (
         <>
-            TopPage
+            Страница на этапе разработки
         </>
     )
 }

@@ -1,9 +1,9 @@
 export type DateType = {
-    id: number, 
-    date: string,
+    id?: number, 
+    date?: string,
 }
 
-export const DATE_TITLE: string = "Released"
+export const DATE_TITLE: string = "Год выпуска"
 
 export type DateToQuery = {
     yearFrom: number,

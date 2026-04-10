@@ -1,7 +1,7 @@
 export const SignInPage = ()=>{
     return (
         <>
-            SignInPage
+            Вход
         </>
     )
 }

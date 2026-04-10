@@ -2,7 +2,7 @@ import { FilterConfig } from "shared/ui/Select/types";
 import { DateType } from "../types"
 
 export const DATE_INFO: DateType[] = [
-    {id: -1, date: "Released"},
+    {id: -1, date: "Все"},
     {id: 0, date: "2026"},
     {id: 1, date: "2025"},
     {id: 2, date: "2024"},
@@ -26,7 +26,7 @@ export const DATE_INFO: DateType[] = [
     {id: 20, date: "1970-1979"},
     {id: 21, date: "1960-1969"},
     {id: 22, date: "1950-1959"},
-    {id: 23, date: "Before the 1950s"},
+    {id: 23, date: "До 1950г."},
 ]
 
 export const DATE_MAP = new Map<number, string>(
@@ -41,7 +41,7 @@ export const dateFilterConfig: FilterConfig<number> = {
     label: item.date,
   })),
 
-  allOptionLabel: "All",
+  allOptionLabel: "Все",
 
   transformValue: (value: string) => {
     return value === "" ? null : Number(value);

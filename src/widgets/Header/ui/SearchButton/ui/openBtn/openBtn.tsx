@@ -1,19 +1,14 @@
-import { Box } from "@mui/material"
-import styles from './styles.module.css'
+import { SearchInput } from "features/SearchInput/ui/searchInput";
 import { Button } from "shared/ui"
 
-export const OpenBtn = ({ onClick }) => {
+import styles from './styles.module.css'
+
+export const OpenBtn = ({ onClick }: {onClick: ()=>void}) => {
     return (
-        <Box className={styles.search__wrapper}>
-            <Button onClick={() => { }} className={styles.searchBtn}>
-
-            </Button>
-
-            <Box className={styles.search__box}>
-                <input className={styles.search__input} type="text" placeholder="Movie/series name or actor/director name"/>
-                <Button onClick={onClick} className={styles.cross}/>
-            </Box>
-        </Box>
+        <div className={styles.search__wrapper}>
+            <Button onClick={() => { }} className={styles.searchBtn}/>
+            <SearchInput onClick={onClick}/>
+        </div>
 
     )
 }

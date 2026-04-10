@@ -5,19 +5,19 @@ import { routesMasks } from '../../shared/config/routesMasks';
 export const routesConfig: RouteConfig[] = [
   {
     mask: routesMasks.main.mask,
-    label: 'Home',
+    label: 'Главная',
   },
   {
     mask: routesMasks.movies.mask,
-    label: 'Movies',
+    label: 'Фильмы',
   },
   {
     mask: routesMasks.series.mask,
-    label: 'Series',
+    label: 'Сериалы',
   },
   {
     mask: routesMasks.top.mask,
-    label: 'Top',
+    label: 'Топ',
   },
   
 ];

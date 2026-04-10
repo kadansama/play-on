@@ -1,17 +1,18 @@
-import { useMemo } from "react";
 import styles from './styles.module.css'
+import { FILM_LABELS } from 'shared/constants/i18n';
 
-interface ILogoContent {
+interface LogoContentProps {
     logoUrl: string | undefined;
     nameRu: string | undefined;
 }
-export const LogoContent = ({ logoUrl, nameRu }: ILogoContent) => {
+
+export const LogoContent = ({ logoUrl, nameRu }: LogoContentProps) => {
     if (logoUrl) {
         return (
             <img
                 className={styles.img}
                 src={logoUrl}
-                alt="Логотип"
+                alt={FILM_LABELS.LOGO_ALT}
                 loading="lazy"
                 decoding="async"
             />

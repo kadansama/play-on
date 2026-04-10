@@ -6,16 +6,16 @@ import { formatDate } from "../ui/DateFilter/lib/formatDate";
 
 
 export const countryFilterConfig: FilterConfig<number | null> = {
-  name: "Countries",
-  allOptionLabel: "All countries",
+  name: "Страны",
+  allOptionLabel: "Все страны",
   queryHook: useCountryIdsQuery,
   transformValue: (value: string, allOptionLabel?: string) => 
     value === allOptionLabel ? null : Number(value)
 };
 
 export const genreFilterConfig: FilterConfig<number | null> = {
-  name: "Genres",
-  allOptionLabel: "All genres", 
+  name: "Жанры",
+  allOptionLabel: "Все жанры", 
   queryHook: useGenreIdsQuery,
   transformValue: (value: string, allOptionLabel?: string) =>
     value === allOptionLabel ? null : Number(value)

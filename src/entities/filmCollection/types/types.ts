@@ -24,7 +24,7 @@ export type Filtered = {
 
 export type FilmPreview = {
   kinopoiskId: number;
-  posterUrl: string;
+  posterUrl?: string;
 };
 
 export type FilteredFilm = {

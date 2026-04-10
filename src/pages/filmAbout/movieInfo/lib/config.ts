@@ -8,13 +8,19 @@ export const formatDuration = (minutes?: number): string | null => {
     return hours > 0 ? `${hours}:${mins}` : `0:${mins}`;
 };
 
+type DetailItem = {
+    key: string;
+    value: string;
+    className: string;
+}
+
 export const useMovieDetails = (id: number) => {
     const { data, isError, isLoading } = useFilmQuery(id);
     
-    const details = useMemo(() => {
+    const details: DetailItem[]= useMemo(() => {
         if (!data) return [];
         
-        const items: any = [];
+        const items: DetailItem[] = [];
         if (data.ratingKinopoisk) {
             items.push({
                 key: 'rating',
@@ -25,7 +31,7 @@ export const useMovieDetails = (id: number) => {
         if (data.year) {
             items.push({
                 key: 'year',
-                value: data.year,
+                value: String(data.year),
                 className: 'wrapper__year'
             });
         }
@@ -39,7 +45,7 @@ export const useMovieDetails = (id: number) => {
         if (data.filmLength) {
             items.push({
                 key: 'length',
-                value: formatDuration(data.filmLength),
+                value: formatDuration(data.filmLength) ?? '',
                 className: 'wrapper__length'
             });
         }

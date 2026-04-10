@@ -22,10 +22,10 @@ export const HomePage = () => {
       <Container>
         <div className={styles.wrapper}>
           <SelectNav></SelectNav>
-          <FilmCarousel films={filmsQuery.data ?? []} title="Movies" />
-          <FilmCarousel films={seriesQuery.data ?? []} title="Series" />
-          <FilmCarousel films={cartoonsQuery.data ?? []} title="Cartoons" />
-          <FilmCarousel films={oscarWinnersQuery.data ?? []} title="Oskar winners" />
+          <FilmCarousel films={filmsQuery.data ?? []} title="Фильмы" />
+          <FilmCarousel films={seriesQuery.data ?? []} title="Сериалы" />
+          <FilmCarousel films={cartoonsQuery.data ?? []} title="Мультфильмы" />
+          <FilmCarousel films={oscarWinnersQuery.data ?? []} title="Лауреаты премии «Оскар»" />
 
         </div>
       </Container>

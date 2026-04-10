@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 export const EditProfile = ()=>{
     return (
       <Button onClick={()=>{}} className={styles.btn}>
-        Edit profile
+        Редактировать профиль
       </Button>  
     )
 }
