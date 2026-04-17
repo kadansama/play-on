@@ -4,6 +4,7 @@
     row-gap: 30px;
     width: 100%;
     position: relative;
+    min-width: 0;
 }
 
 .carousel__heading {
