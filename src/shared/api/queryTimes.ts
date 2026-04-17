@@ -6,6 +6,6 @@ export const ONE_WEEK = ONE_DAY * 7
 
 
 export const filmQueryConfig = {
-  staleTime: 0,
-  gcTime: ONE_MIN*5,
+  staleTime: ONE_MIN,
+  gcTime: FIVE_MIN,
 }

@@ -15,7 +15,7 @@ export const Footer = () => {
             <Container>
                 <div className={styles.wrapper}>
                     <SocialMedia />
-                    <FooterLinks />
+                    {/* <FooterLinks /> */}
                     <StoreButton />
                     <HelpPanel />
                 </div>

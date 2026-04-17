@@ -5,10 +5,10 @@ import { Logo } from 'shared/ui'
 export const HelpPanel = ()=>{
     return (
         <div className={styles.panel}>
-            <LangSelect useText = {true}/>
+            {/* <LangSelect useText = {true}/> */}
             <div className={styles.panel__info}>
                 <Logo size='small'/>
-                <span className={styles.panel__city}>Россия</span>
+                {/* <span className={styles.panel__city}>Россия</span> */}
             </div>
         </div>
     )

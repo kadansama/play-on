@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box, useMediaQuery } from "@mui/material"
 import { Logo } from "shared/ui/Logo"
 import { Nav } from "../../../../shared/ui/Nav"
 import styles from './styles.module.css'
@@ -10,12 +10,19 @@ interface HeaderMainProps {
 }
 
 export const HeaderMain = memo(({ routes, isNavOpen }: HeaderMainProps) => {
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  
+  const headerInfoClass = `${styles.header__info} ${isMobile && isNavOpen ? styles.centered : ''}`;
+  
   return (
-    <Box className={styles.header__info}>
+    <Box className={headerInfoClass}>
       <Logo size={'large'} />
-      <Box className={`${styles.navWrapper} ${isNavOpen ? styles.hidden : ""}`}>
-        <Nav routes={routes} />
-      </Box>
+      {isDesktop && (
+        <Box className={`${styles.navWrapper} ${isNavOpen ? styles.hidden : ""}`}>
+          <Nav routes={routes} />
+        </Box>
+      )}
     </Box>
   )
 })

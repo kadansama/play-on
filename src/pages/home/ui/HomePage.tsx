@@ -21,7 +21,7 @@ export const HomePage = () => {
       <FilmHeroCarousel films={topPopularQuery.data ?? []} />
       <Container>
         <div className={styles.wrapper}>
-          <SelectNav></SelectNav>
+          {/* <SelectNav></SelectNav> */}
           <FilmCarousel films={filmsQuery.data ?? []} title="Фильмы" />
           <FilmCarousel films={seriesQuery.data ?? []} title="Сериалы" />
           <FilmCarousel films={cartoonsQuery.data ?? []} title="Мультфильмы" />

@@ -1,8 +1,8 @@
 .btn{
-    width: 19px;
+    width: 24px;
     cursor: pointer;
     border: none;
-    height: 20px;
+    height: 25px;
     background-color: inherit;
     background-image: url('@assets/images/loop.svg');
 }

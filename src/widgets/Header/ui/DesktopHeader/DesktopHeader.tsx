@@ -1,5 +1,6 @@
 import { memo, useState, useCallback, useEffect } from "react"
-import { useLocation } from "react-router-dom" 
+import { useLocation } from "react-router-dom"
+import { useMediaQuery } from "@mui/material"
 
 import { HeaderMain } from "../HeaderMain"
 import { HeaderAction } from "../HeaderAction"
@@ -13,7 +14,9 @@ interface DesktopHeaderProps {
 export const DesktopHeader = memo(({ routes }: DesktopHeaderProps) => {
     const [isSearchOpen, setSearchOpen] = useState(false)
     const location = useLocation();
-     useEffect(() => {
+    const isMobile = useMediaQuery('(max-width: 768px)');
+    
+    useEffect(() => {
         setSearchOpen(false)
       }, [location.pathname]);
     
@@ -21,8 +24,10 @@ export const DesktopHeader = memo(({ routes }: DesktopHeaderProps) => {
         setSearchOpen(prev => !prev)
     }, [])
     
+    const headerClass = `${styles.desktopHeader} ${isMobile && isSearchOpen ? styles.desktopHeader__mobile : ''}`;
+    
     return (
-        <div className={styles.desktopHeader}>
+        <div className={headerClass}>
             <HeaderMain routes={routes} isNavOpen={isSearchOpen} />
             <HeaderAction isOpen={isSearchOpen} onToggleSearch={toggleSearch} />
             {isSearchOpen && (

@@ -4,6 +4,10 @@
     column-gap: 50px;
 }
 
+.header__info.centered {
+  justify-content: center;
+}
+
 .navWrapper {
   transition: opacity 0.3s ease; 
 }
@@ -15,5 +19,11 @@
 @media (max-width: 1024px){
   .navWrapper{
     display: none;
+  }
+}
+
+@media (max-width: 768px){
+  .header__info.centered {
+    width: 100%;
   }
 }

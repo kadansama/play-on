@@ -1,0 +1,31 @@
+.mobileNav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.mobileNav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 6px;
+  color: var(--white);
+  transition: opacity 0.2s ease;
+}
+
+.mobileNav__item:hover {
+  opacity: 0.8;
+}
+
+.mobileNav__icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.mobileNav__label {
+  font-size: 12px;
+  color: var(--white);
+  white-space: nowrap;
+}

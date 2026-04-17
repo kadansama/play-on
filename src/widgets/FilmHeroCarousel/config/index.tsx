@@ -14,4 +14,22 @@ export const heroSettings = {
   prevArrow: <CustomArrow  direction="left"/>,
   centerMode: true,
   variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+      }
+    }
+  ]
 };

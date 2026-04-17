@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box, useMediaQuery } from "@mui/material"
 import styles from './styles.module.css'
 import { LangSelect } from "features/LangSelect/ui"
 import { SearchButton } from "../SearchButton/SearchButton"
@@ -13,6 +13,7 @@ interface HeaderActionProps {
 }
 
 export const HeaderAction = memo(({ isOpen, onToggleSearch }: HeaderActionProps) => {
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -28,11 +29,14 @@ export const HeaderAction = memo(({ isOpen, onToggleSearch }: HeaderActionProps)
   }, [isOpen]);
   return (
     <Box className={`${styles.header__action} ${isOpen ? styles.header__actionOpen : ""}`}>
-      <LangSelect />
+      {/* <LangSelect /> */}
       <SearchButton isOpen={isOpen} toggle={onToggleSearch} />
-      <BuyButton />
-      <Notification />
-      <Profile />
+      {isDesktop && (
+        <Profile />
+      )}
+      {/* <BuyButton /> */}
+      {/* <Notification /> */}
+
     </Box>
   )
 });

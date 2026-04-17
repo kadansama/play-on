@@ -1,0 +1,31 @@
+.mobileBottomBar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #2E2E2E80 0%, #000000B3 100%);
+  z-index: 100;
+  height: auto;
+  box-sizing: border-box;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+@media (max-width: 1024px) {
+  .mobileBottomBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.mobileBottomBar__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  box-sizing: border-box;
+  max-width: 600px;
+}

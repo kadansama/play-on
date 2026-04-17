@@ -113,3 +113,9 @@
 .carousel__film--center:hover .carousel__filmInner::after {
   opacity: 0.6;
 }
+
+@media(max-width: 768px){
+  .carousel__wrapper{
+    padding: 20px 0;
+  }
+}

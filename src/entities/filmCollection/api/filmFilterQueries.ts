@@ -14,19 +14,34 @@ export const useCountryIdsQuery = () =>
     queryKey: ['filters', 'countryIds'],
     queryFn: () => filmFiltersApi.getCountryIds(),
   })
+
+// Helper для queryKey поиска (динамические фильтры, НЕ кэшируются)
+const makeSearchFiltersQueryKey = (filters: Filtered) => {
+  const { countries, genres, order, type, ratingFrom, ratingTo, yearFrom, yearTo, imdbId, keyword, page } = filters;
+  return ['search', 'filtered', { countries, genres, order, type, ratingFrom, ratingTo, yearFrom, yearTo, imdbId, keyword, page }];
+};
+
+// Helper для queryKey коллекций (фиксированные коллекции, КЭШИРУЮТСЯ в IndexedDB)
+// Включаем page - но в persister будет проверка что кэшируется только page 1
+const makeCollectionQueryKey = (filters: Filtered) => {
+  const { countries, genres, order, type, ratingFrom, ratingTo, yearFrom, yearTo, imdbId, keyword, page } = filters;
+  return ['collections', { countries, genres, order, type, ratingFrom, ratingTo, yearFrom, yearTo, imdbId, keyword, page }];
+};
   
+// Динамический поиск по фильтрам - только RAM
 export const useFilmsWithFiltersQuery = (filters: Filtered) =>
   useQuery<FilmPreview[], Error>({
-    queryKey: ['films', 'filtered', filters],
+    queryKey: makeSearchFiltersQueryKey(filters),
     queryFn: () => filmFiltersApi.getFilmsWithFilters(filters),
+    staleTime: 0,
+    gcTime: FIVE_MIN,
   })
+
 
 export const useCachedFilmsQuery = (filters: Filtered) => {
   return useQuery<FilmPreview[], Error>({
-    queryKey: ['films', filters],
+    queryKey: makeCollectionQueryKey(filters),
     queryFn: () => filmFiltersApi.getFilmsWithFilters(filters),
-    staleTime: 0, 
-    gcTime: FIVE_MIN, 
   });
 };
 
