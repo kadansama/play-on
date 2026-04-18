@@ -14,17 +14,17 @@ export class FilmWrap {
         const movieData = await this.api.getMovieData();
 
         return {
-            kinopoiskId: movieData.kinopoiskId,
-            nameRu: movieData.nameRu,
-            nameEn: movieData.nameEn,
-            ratingKinopoisk: movieData.ratingKinopoisk,
-            year: movieData.year,
-            genres: movieData.genres,
-            filmLength: movieData.filmLength,
-            ratingAgeLimits: movieData.ratingAgeLimits?.replace("age", "") + "+",
-            description: movieData.description,
-            posterUrl: movieData.posterUrl,
-            logoUrl: movieData.logoUrl,
+            kinopoiskId: movieData.kinopoiskId ?? 0,
+            nameRu: movieData.nameRu ?? '',
+            nameEn: movieData.nameEn ?? '',
+            ratingKinopoisk: movieData.ratingKinopoisk ?? 0,
+            year: movieData.year ?? 0,
+            genres: movieData.genres ?? [],
+            filmLength: movieData.filmLength ?? 0,
+            ratingAgeLimits: (movieData.ratingAgeLimits?.replace("age", "") ?? "") + "+",
+            description: movieData.description ?? '',
+            posterUrl: movieData.posterUrl ?? '',
+            logoUrl: movieData.logoUrl ?? '',
         };
     }
     async getDirectors(): Promise<{ nameEn: string; nameRu: string }[]> {
@@ -60,6 +60,6 @@ export class FilmWrap {
     }
     async getSimularMovies(): Promise<SimularMovieItem[]> {
         const data = await this.api.getSimularMovie();
-        return data.items?.slice(0, 5) || [];
+        return data.items || [];
     }
 }

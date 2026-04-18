@@ -9,7 +9,7 @@ export const MoviePanel = () => {
     const { id } = useParams<{ id: string }>();
     const numericId = Number(id)
     return (
-        <div>
+        <div className={styles.panel}>
             <div className={styles.wrapper}>
                 <MovieInfo id={numericId} />
                 <FilmPlayer id={numericId} />

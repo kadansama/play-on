@@ -36,3 +36,14 @@
     font-size: 18,75px;
     font-weight: 700;
 }
+
+@media(max-width: 1025px){
+    .wrapper{
+        z-index: 2;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

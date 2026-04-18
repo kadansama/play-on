@@ -16,19 +16,17 @@ export const FilmCarousel = memo(({ films, title }: FilmCarouselProps) => {
   const isMediumScreen = useMediaQuery('(min-width: 768px) and (max-width: 899px)');
   const isSmallScreen = useMediaQuery('(max-width: 767px)');
 
-  // Создаем settings в зависимости от текущего breakpoint
+
   const settings = useMemo(() => {
     let slidesToShow = 6;
-    let slidesToScroll = 2;
+    let slidesToScroll = 3;
     let arrows = true;
 
     if (isSmallScreen) {
       slidesToShow = 3;
-      slidesToScroll = 1;
       arrows = false;
     } else if (isMediumScreen) {
       slidesToShow = 5;
-      slidesToScroll = 1;
       arrows = false;
     }
 

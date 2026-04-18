@@ -7,7 +7,7 @@ export const HelpPanel = ()=>{
         <div className={styles.panel}>
             {/* <LangSelect useText = {true}/> */}
             <div className={styles.panel__info}>
-                <Logo size='small'/>
+                <Logo size='large'/>
                 {/* <span className={styles.panel__city}>Россия</span> */}
             </div>
         </div>

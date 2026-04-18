@@ -17,7 +17,7 @@ export const Footer = () => {
                     <SocialMedia />
                     {/* <FooterLinks /> */}
                     <StoreButton />
-                    <HelpPanel />
+                    {/* <HelpPanel /> */}
                 </div>
             </Container>
         </footer>

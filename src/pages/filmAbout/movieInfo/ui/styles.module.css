@@ -2,9 +2,26 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    max-width: 60%;
+    width: auto;
 }
 
 .textFallback{
     font-weight: 900;
     text-align: center;
+}
+@media(max-width: 1025px){
+    .img{
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(max-width: 768px){
+    p{
+        font-size: 14px;
+    }
+    .textFallback{
+        font-size: 30px;
+    }
 }

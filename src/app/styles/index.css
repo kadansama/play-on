@@ -73,6 +73,6 @@ input, input:focus{
 
 @media (max-width: 1024px) {
   .app {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 }

@@ -5,6 +5,7 @@
     border: 0;
     margin-top: -330px;
 }
+
 .frame:-webkit-full-screen {
     width: 100vw;
     height: 100vh;
@@ -31,4 +32,35 @@
     height: 100vh;
     margin: 0;
     clip-path: none;
+}
+
+@media(max-width: 1637px) {
+    .frame {
+        clip-path: inset(0 0 411px 0);
+        margin-bottom: -411px;
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 1025px) {
+    .frame {
+        width: 100%;
+        clip-path: inset(330px 0 0 0);
+        margin-top: -330px;
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width: 950px) {
+    .frame {
+        clip-path: inset(0 0 330px 0);
+        margin-bottom: -330px;
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 550px) {
+    .frame {
+        clip-path: inset(0 0 315px 0);;
+    }
 }
