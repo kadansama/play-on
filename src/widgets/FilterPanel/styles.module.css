@@ -3,10 +3,18 @@
     width: 100%;
     column-gap: 15px;
     margin-bottom: 50px;
+    flex-wrap: wrap;
+    row-gap: 15px;
 }
 
 .loader{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+@media(max-width: 768px){
+    .panel{
+        margin-bottom: 30px;
+    }
 }

@@ -28,3 +28,16 @@
 .option {
     background: var(--blue-600);
 }
+
+@media(max-width: 768px){
+    .select{
+        max-width: 170px;
+    }
+}
+
+@media(max-width: 374px){
+    .select{
+        max-width: none;
+        width: 200px;
+    }
+}
