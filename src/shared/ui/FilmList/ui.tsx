@@ -2,7 +2,6 @@
 import { FilmPreview } from "entities/filmCollection/types";
 import { MovieCard } from "../MovieCard/MovieCard";
 import styles from "./styles.module.css"
-import { CircularProgress } from "@mui/material";
 
 type FilmListType = {
     list: FilmPreview[],

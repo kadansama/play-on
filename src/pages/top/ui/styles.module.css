@@ -1,0 +1,15 @@
+.topPage {
+    width: 100%;
+}
+
+.topPage__carousels {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+@media(max-width: 768px) {
+    .topPage__carousels {
+        row-gap: 45px;
+    }
+}

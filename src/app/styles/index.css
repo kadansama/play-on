@@ -76,3 +76,9 @@ input, input:focus{
     padding-bottom: 50px;
   }
 }
+
+iframe {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  pointer-events: auto;
+}

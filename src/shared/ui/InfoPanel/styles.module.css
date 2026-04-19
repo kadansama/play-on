@@ -1,17 +1,59 @@
-.panel{
+.panel {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 50px;
     align-items: center;
+    gap: 30px;
 }
 
-.panel__heading{
+.panel__text {
+    min-width: 0;
+}
+
+.panel__heading {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 15px;
+    line-height: 1.2;
 }
 
-.panel__paragraph{
+.panel__paragraph {
     font-size: 18px;
+    line-height: 1.45;
+    max-width: 900px;
+}
+
+@media(max-width: 768px) {
+    .panel {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+
+    .panel__heading {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .panel__paragraph {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 425px) {
+    .panel {
+        margin-bottom: 30px;
+        gap: 16px;
+    }
+
+    .panel__heading {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .panel__paragraph {
+        font-size: 14px;
+    }
 }

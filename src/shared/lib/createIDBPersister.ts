@@ -10,9 +10,10 @@ function shouldPersistQuery(queryKey: readonly unknown[]): boolean {
     return true;
   }
 
-  // Сохраняем 'top/*' коллекции (популярные, Оскары и т.д.)
+  // Сохраняем 'top/*' коллекции, но только первая страница (page 1 или undefined)
   if (prefix === 'top') {
-    return true;
+    const page = queryKey[2];
+    return page === undefined || page === 1 || page === null;
   }
 
   // Сохраняем 'collections/*' но только первая страница (page 1 или undefined)

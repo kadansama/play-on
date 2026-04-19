@@ -5,6 +5,7 @@ export const routesMasks = {
   movies: { mask: '/movies', create: () => '/movies' },
   series: { mask: '/series', create: () => '/series' },
   top: { mask: '/top', create: () => '/top' },
+  topCollection: { mask: '/top/:collection', create: (collection: string) => `/top/${collection}` },
 
   profile: { mask: '/profile', create: () => '/profile' },
   profileSubscription: { mask: '/profile/subscription', create: () => '/profile/subscription' },

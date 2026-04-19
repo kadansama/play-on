@@ -1,7 +1,21 @@
-.btn{
+.btn {
     font-size: 18px;
     color: var(--gray-200);
     background: var(--gray-2000);
     border-radius: 8px;
     padding: 16px 50px;
+    white-space: nowrap;
+}
+
+@media(max-width: 560px) {
+    .btn {
+        width: 100%;
+        padding: 14px 24px;
+    }
+}
+
+@media(max-width: 425px) {
+    .btn {
+        font-size: 16px;
+    }
 }

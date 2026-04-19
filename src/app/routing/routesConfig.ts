@@ -17,7 +17,7 @@ export const routesConfig: RouteConfig[] = [
   },
   {
     mask: routesMasks.top.mask,
-    label: 'Топ',
+    label: 'Подборки',
   },
   
 ];

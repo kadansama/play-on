@@ -7,7 +7,7 @@ import { SignUpPage } from 'pages/sign-up';
 import { MoviesPage } from 'pages/movies/ui';
 import { ProfilePage } from 'pages/profile';
 import { SeriesPage } from 'pages/series';
-import { TopPage } from 'pages/top';
+import { TopCollectionPage, TopPage } from 'pages/top';
 import { CommingSoonPage } from 'pages/commingSoon';
 import { Watched } from 'pages/watched';
 import { Favorites } from 'pages/favorites';
@@ -25,6 +25,7 @@ export const routes: RouteObject[] = [
       { path: routesMasks.movies.mask, element: <MoviesPage /> },
       { path: routesMasks.series.mask, element: <SeriesPage /> },
       { path: routesMasks.top.mask, element: <TopPage /> },
+      { path: routesMasks.topCollection.mask, element: <TopCollectionPage /> },
       {
         path: routesMasks.profile.mask,
         element: <ProfilePage />,

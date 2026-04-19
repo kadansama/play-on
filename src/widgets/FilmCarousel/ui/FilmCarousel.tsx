@@ -1,6 +1,7 @@
 import { memo, useMemo } from "react";
 import { useMediaQuery } from "@mui/material";
 import { CarouselBase } from "shared/ui/CarouselBase";
+import { Link } from "shared/ui/Link";
 import { MovieCard } from "shared/ui/MovieCard/MovieCard";
 import { FilmPreview } from "entities/filmCollection/types";
 import styles from "./styles.module.css";
@@ -9,17 +10,17 @@ import { OrdinaryArrow } from "../ui/OrdinaryArrow";
 type FilmCarouselProps = {
   films: FilmPreview[];
   title: string;
+  titleLink?: string;
 };
 
-export const FilmCarousel = memo(({ films, title }: FilmCarouselProps) => {
-  const isLargeScreen = useMediaQuery('(min-width: 900px)');
+export const FilmCarousel = memo(({ films, title, titleLink }: FilmCarouselProps) => {
   const isMediumScreen = useMediaQuery('(min-width: 768px) and (max-width: 899px)');
   const isSmallScreen = useMediaQuery('(max-width: 767px)');
 
 
   const settings = useMemo(() => {
     let slidesToShow = 6;
-    let slidesToScroll = 3;
+    const slidesToScroll = 3;
     let arrows = true;
 
     if (isSmallScreen) {
@@ -42,7 +43,7 @@ export const FilmCarousel = memo(({ films, title }: FilmCarouselProps) => {
       centerMode: false,
       centerPadding: "50px",
     };
-  }, [isLargeScreen, isMediumScreen, isSmallScreen]);
+  }, [isMediumScreen, isSmallScreen]);
 
   const slides = useMemo(() =>
     films.map((film) => (
@@ -55,7 +56,13 @@ export const FilmCarousel = memo(({ films, title }: FilmCarouselProps) => {
 
   return (
     <div className={styles.carousel__wrapper}>
-      <h2 className={styles.carousel__heading}>{title}</h2>
+      <h2 className={styles.carousel__heading}>
+        {titleLink ? (
+          <Link to={titleLink} className={styles.carousel__headingLink}>
+            {title}
+          </Link>
+        ) : title}
+      </h2>
       <CarouselBase settings={settings}>{slides}</CarouselBase>
     </div>
   );

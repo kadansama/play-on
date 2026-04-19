@@ -1,1 +1,1 @@
-export { TopPage } from './ui';
+export { TopCollectionPage, TopPage } from './ui';
