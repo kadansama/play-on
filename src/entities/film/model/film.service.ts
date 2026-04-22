@@ -1,6 +1,10 @@
-import { BaseApi } from "shared/api/baseApi";
 import { Movie, SimularMovieItem, StaffPerson, Trailer } from "../types";
 import { FilmApi } from "../api/film";
+
+const formatAgeLimit = (ageLimit?: string): string => {
+    const age = ageLimit?.replace("age", "").trim();
+    return age ? `${age}+` : "";
+};
 
 export class FilmWrap {
     private api: FilmApi;
@@ -21,7 +25,7 @@ export class FilmWrap {
             year: movieData.year ?? 0,
             genres: movieData.genres ?? [],
             filmLength: movieData.filmLength ?? 0,
-            ratingAgeLimits: (movieData.ratingAgeLimits?.replace("age", "") ?? "") + "+",
+            ratingAgeLimits: formatAgeLimit(movieData.ratingAgeLimits),
             description: movieData.description ?? '',
             posterUrl: movieData.posterUrl ?? '',
             logoUrl: movieData.logoUrl ?? '',

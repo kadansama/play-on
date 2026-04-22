@@ -5,7 +5,7 @@ export const formatDuration = (minutes?: number): string | null => {
     if (!minutes) return null;
     const hours = Math.floor(minutes / 60);
     const mins = minutes % 60;
-    return hours > 0 ? `${hours}:${mins}` : `0:${mins}`;
+    return `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}`;
 };
 
 type DetailItem = {
@@ -49,7 +49,7 @@ export const useMovieDetails = (id: number) => {
                 className: 'wrapper__length'
             });
         }
-        if (data.ratingAgeLimits && data.ratingAgeLimits != "undefined+") {
+        if (data.ratingAgeLimits) {
             items.push({
                 key: 'ageLimit',
                 value: `${data.ratingAgeLimits}`,

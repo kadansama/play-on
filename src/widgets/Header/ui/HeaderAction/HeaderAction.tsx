@@ -1,10 +1,7 @@
 import { Box, useMediaQuery } from "@mui/material"
 import styles from './styles.module.css'
-import { LangSelect } from "features/LangSelect/ui"
 import { SearchButton } from "../SearchButton/SearchButton"
-import { BuyButton } from "features/BuyButton"
 import { Profile } from "features/Profile"
-import { Notification } from "features/Notification"
 import { memo, useEffect } from "react"
 
 interface HeaderActionProps {
@@ -15,16 +12,20 @@ interface HeaderActionProps {
 export const HeaderAction = memo(({ isOpen, onToggleSearch }: HeaderActionProps) => {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
+
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.classList.add('no-scroll');
+      html.classList.add('no-scroll');
+      body.classList.add('no-scroll');
     } else {
-      document.body.style.overflow = '';
-      document.body.classList.remove('no-scroll');
+      html.classList.remove('no-scroll');
+      body.classList.remove('no-scroll');
     }
+
     return () => {
-      document.body.style.overflow = '';
-      document.body.classList.remove('no-scroll');
+      html.classList.remove('no-scroll');
+      body.classList.remove('no-scroll');
     };
   }, [isOpen]);
   return (

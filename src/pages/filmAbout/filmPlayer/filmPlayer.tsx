@@ -18,6 +18,7 @@ export const FilmPlayer = ({ id }: FilmPlayerProps) => {
             /> */}
             <iframe src={`https://kinodivbox.github.io/iframe?id=${id}`}
                 className={styles.frame}
+                title={FILM_LABELS.PLAYER_TITLE}
                 width="100%" height="600" allow="fullscreen" loading="lazy"
                 scrolling="no"
                 style={{ overflow: "hidden", border: "none" }}>

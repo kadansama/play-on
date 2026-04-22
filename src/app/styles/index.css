@@ -12,6 +12,12 @@ body {
   text-transform: none;
 }
 
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 p,span, h1,h2,h3,h4,h5,h6{
   margin: 0;
   padding: 0;
